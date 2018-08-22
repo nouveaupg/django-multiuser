@@ -14,7 +14,7 @@ This is an ongoing project to provide basic views on the Django Project layer to
 6. ```> (venv) python3 manage.py createsuperuser```
 7. ```> (venv) python3 manage.py collectstatic```
 8. ```> (venv) python3 manage.py runserver 8000```
-9. Using a web browser, attempt to load http://localhost:8000, you should see a basic interface for an end user to create an account, login, or reset their password. If not something has gone wrong, e-mail me at nouveau.pg@gmail.com or rapidiphonedev@gmail.com.
+9. Using a web browser, attempt to load http://localhost:8000, you should see a basic interface for an end user to create an account, login, or reset their password. If not something has gone wrong, please add an issue.
 10. To further test the setup, try creating a test user.
 11. Using the information you gave when creating the superuser, login to http://localhost:800/admin and see if the user is in the user table.
 12. ```> (venv) python3 manage.py createapplication <yourapp>```
@@ -26,4 +26,4 @@ The CSS namespaces are aggressively namespaced to avoid conflict with your own C
 A version of jQuery UI is included to help with form validation. It is in /static/jquery. If you have a preferred solution for your project, this can be replaced. Templates are provided with inheritence and comments to help you customize for your specific application.
 
 
-13. **Get your POC running even quicker than with Django alone**
+13. **Get your POC/MVP running even quicker than with Django alone**
