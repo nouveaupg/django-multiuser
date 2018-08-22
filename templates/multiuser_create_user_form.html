@@ -6,24 +6,32 @@
     {% csrf_token %}
     <table border="0">
         <tr>
-            <td><strong><label>Username</label></strong></td>
+            <td><strong><label for="firstname">First Name</label></strong></td>
+            <td><input id="multiuser_create_first_name_field" name="first_name"></td>
+        </tr>
+        <tr>
+            <td><strong><label for="lastname">Last Name</label></strong></td>
+            <td><input id="multiuser_create_last_name_field" name="last_name"></td>
+        </tr>
+        <tr>
+            <td><strong><label for="username">Username</label></strong></td>
             <td><input id="multiuser_create_username_field" name="username"></td>
         </tr>
         <tr>
-            <td><strong><label>E-mail Address</label></strong></td>
+            <td><strong><label for="email_address">E-mail Address</label></strong></td>
             <td><input id="multiuser_create_email_field" name="email_address"></td>
         </tr>
         <tr>
-            <td><strong><label>Password</label></strong></td>
+            <td><strong><label for="password">Password</label></strong></td>
             <td><input id="multiuser_login_password_field" name="password" type="password"></td>
         </tr>
         <tr>
-            <td><strong><label>Password (repeat)</label></strong></td>
-            <td><input id="multiuser_login_password_repeat_field" name="password" type="password"></td>
+            <td><strong><label for="password_repeat">Password (repeat)</label></strong></td>
+            <td><input id="multiuser_login_password_repeat_field" name="password_repeat" type="password"></td>
         </tr>
         <tr>
             <td><input id="multiuser_login_reset" type="reset"></td>
-            <td><input id="multiuser_login_submit" type="submit"</td>
+            <td align="right"><input id="multiuser_login_submit" type="submit"</td>
         </tr>
     </table>
 </form>

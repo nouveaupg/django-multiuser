@@ -5,12 +5,6 @@ DEFAULT_TITLE = "Default MultiUser Site"
 
 
 def default_page(request):
-    """
-
-    :type request: Default multiuser homepage
-    """
-    title = "title"
-    menu = "menu"
     template = loader.get_template("multiuser_login_form.html")
     context = {
         "multi_user_main_title": DEFAULT_TITLE,
