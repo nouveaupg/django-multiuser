@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ multi_user_main_title }}</title>
+    <link rel="stylesheet" href="{% static "css/multiuser_base.css" %}" />
+    {# NOTE: you may adjust the theme using theme rollery on jqueryui.com and replacing contents of static/jquery #}
+    <link rel="stylesheet" href="{% static "jquery/css/jquery-ui.css" %}" />
+    {# similarly you may change the jQuery version in the same manner #}
+    <script src="{% static "jquery/js/jquery.js" %}"></script>
+    <script src="{% static "jquery/js/jquery-ui.js" %}"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="multiuser_main">
+            {% block multiuser_main %}
+            <h1>{{ multi_user_main_title }}</h1>
+            <p>Create a user account or login.</p>
+            {% endblock %}
+        </div>
+        <div id="multiuser_login_menu">
+            {% block multiuser_menu %}
+            <form action="/login" method="post">
+                {% csrf_token %}
+                <table border="0">
+                    <tr>
+                        <td><strong><label>Username</label></strong></td>
+                        <td><input id="multiuser_login_username_field" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td><strong><label>Password</label></strong></td>
+                        <td><input id="multiuser_login_password_field" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td><input id="multiuser_login_reset" type="reset"></td>
+                        <td><input id="multiuser_login_submit" type="submit"</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="create_user/">Create new account</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="reset_passwd/">Reset/recover password</a></td>
+                    </tr>
+                </table>
+            </form>
+        {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
