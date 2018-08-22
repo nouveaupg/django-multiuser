@@ -1,3 +1,37 @@
-<form action="/create_user/" method="post">
+{# default create user form #}
+{% extends "multiuser_home_base.html" %}
 
+{% block multiuser_main %}
+<form action="/create_user/" method="post">
+    {% csrf_token %}
+    <table border="0">
+        <tr>
+            <td><strong><label>Username</label></strong></td>
+            <td><input id="multiuser_create_username_field" name="username"></td>
+        </tr>
+        <tr>
+            <td><strong><label>E-mail Address</label></strong></td>
+            <td><input id="multiuser_create_email_field" name="email_address"></td>
+        </tr>
+        <tr>
+            <td><strong><label>Password</label></strong></td>
+            <td><input id="multiuser_login_password_field" name="password" type="password"></td>
+        </tr>
+        <tr>
+            <td><strong><label>Password (repeat)</label></strong></td>
+            <td><input id="multiuser_login_password_repeat_field" name="password" type="password"></td>
+        </tr>
+        <tr>
+            <td><input id="multiuser_login_reset" type="reset"></td>
+            <td><input id="multiuser_login_submit" type="submit"</td>
+        </tr>
+    </table>
 </form>
+{% endblock %}
+
+{% block multiuser_menu %}
+    <ul>
+    <li><a href="/reset_password/">Reset password</a></li>
+    <li><a href="/">Back</a></li>
+    </ul>
+{% endblock %}

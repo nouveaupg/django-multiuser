@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import default_page
+from .views import default_page, create_user_page, reset_password_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', default_page)
+    path('', default_page),
+    path('create_user/', create_user_page),
+    path('reset_password/', reset_password_page)
 ]
